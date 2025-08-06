@@ -14,7 +14,7 @@ pub async fn get_students(db: web::Data<MySqlPool>) -> impl Responder {
     }
 }
 
-#[get("/GetStudentsDetail")]
+#[get("/GetStudents")]
 pub async fn get_student_details(db: web::Data<MySqlPool>) -> impl Responder {
     let result = sqlx::query_as::<_, StudentDetails>("SELECT * FROM student_details")
         .fetch_all(db.get_ref())
