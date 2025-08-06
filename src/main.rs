@@ -1,4 +1,5 @@
 mod models;
+mod handlers;
 
 use actix_web::{App, HttpServer, web};
 use dotenv::dotenv;
